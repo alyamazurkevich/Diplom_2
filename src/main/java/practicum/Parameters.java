@@ -12,4 +12,5 @@ public class Parameters {
                 .contentType(ContentType.JSON)
                 .baseUri(BASE_URI);
     }
+
 }

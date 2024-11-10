@@ -24,6 +24,7 @@ public class OrderChecking {
                 .statusCode(HttpURLConnection.HTTP_BAD_REQUEST)
                 .assertThat().body("message",equalTo("Ingredient ids must be provided"));
     }
+
     // Проверка в заказе не использовались фальшивые ингредиенты
     @Step("Check order not create with false hash ingredients")
     public void checkBadHash(ValidatableResponse orderResponse) {

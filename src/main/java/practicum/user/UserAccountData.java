@@ -15,7 +15,6 @@ public class UserAccountData {
     public static Object from(User user){
         return new UserAccountData(user.getEmail(), user.getPassword());
     }
-
     public String getEmail() {
         return email;
     }

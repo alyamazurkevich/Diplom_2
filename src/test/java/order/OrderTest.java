@@ -48,6 +48,7 @@ public class OrderTest {
         ValidatableResponse listResponse = orderStep.getOrdersAuthUser(accessToken);
         orderChecking.checkCorrectOrders(listResponse);
     }
+
     // получать неавторизованные пользовательские заказы
     @DisplayName("get not auth user orders")
     @Description("Get orders with auth user. POST/api/orders")

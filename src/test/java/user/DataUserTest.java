@@ -59,6 +59,7 @@ public class DataUserTest {
         ValidatableResponse changeResponse =  userStep.changeUserData(accessToken, user);
         userChecking.checkChange(changeResponse);
     }
+
     // Изменение данных без авторизации
     @DisplayName("Changing data without authorization")
     @Description("Path = api/auth/user")

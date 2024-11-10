@@ -10,7 +10,6 @@ public class IngredientsOrder {
         this.data = data;
         this.success = success;
     }
-
     public IngredientsOrder() {
 
     }

@@ -68,6 +68,7 @@ public class CreationUserTest {
         ValidatableResponse createResponse = userStep.createUser(user);
         userChecking.checkNotCreatedField(createResponse);
     }
+
     // Невозможно создать пользователя без поля пароля
     @DisplayName("Can not create user without password field")
     @Description("POST/ api/ auth/ register")

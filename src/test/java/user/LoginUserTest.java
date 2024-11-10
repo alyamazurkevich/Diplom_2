@@ -50,6 +50,7 @@ public class LoginUserTest {
         ValidatableResponse loginResponse = userStep.loginUser((UserAccountData) creds);
         userChecking.checkNotLoginWithWrongParams(loginResponse);
     }
+
     // Пользователь не может войти в систему с неправильным адресом электронной почты
     @DisplayName("User can't logg in with wrong mail")
     @Description("POST/api/auth/login")

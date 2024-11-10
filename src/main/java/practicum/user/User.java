@@ -24,7 +24,6 @@ public class User {
     public static User random(){
         return new User(RandomStringUtils.randomAlphabetic(4,5)+"@yandex.ru","123456", "Pers");
     }
-
     public String getEmail() {
         return email;
     }

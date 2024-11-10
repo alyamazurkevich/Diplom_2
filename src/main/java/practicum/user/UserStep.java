@@ -55,6 +55,7 @@ public class UserStep extends Parameters {
                 .then()
                 .log().all();
     }
+
     // Изменение неавторизованных пользовательских данных
     @Step("Changing not auth user data")
     public ValidatableResponse changeUserData(User user) {

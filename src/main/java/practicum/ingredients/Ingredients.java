@@ -68,7 +68,6 @@ public class Ingredients {
     public float getPrice() {
         return price;
     }
-
     public String getImage() {
         return image;
     }

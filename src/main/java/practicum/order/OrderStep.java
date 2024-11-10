@@ -33,6 +33,7 @@ public class OrderStep extends Parameters {
                 .post(ORDERS)
                 .then().log().all();
     }
+
     // Получение заказов от авторизованного пользователя
     @Step("Getting orders of  auth user")
     public ValidatableResponse getOrdersAuthUser(String accessToken) {

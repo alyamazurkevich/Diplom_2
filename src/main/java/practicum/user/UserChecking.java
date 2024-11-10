@@ -50,6 +50,7 @@ public class UserChecking {
                 .body("message", equalTo("email or password are incorrect"))
                 .statusCode(HttpURLConnection.HTTP_UNAUTHORIZED);
     }
+
     // Проверка изменения пользовательских данных
     @Step("Check of change user data")
     public void checkChange(ValidatableResponse changeResponse) {

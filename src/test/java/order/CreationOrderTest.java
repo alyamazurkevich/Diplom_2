@@ -98,6 +98,7 @@ public class CreationOrderTest {
         ValidatableResponse orderResponse = orderStep.createOrderWithoutAuth(order);
         orderChecking.checkBadHash(orderResponse);
     }
+
     // Создание заказа без указания ингредиентов пользователем
     @DisplayName("Creating order with no ingredients auth user")
     @Description("POST/api/orders")

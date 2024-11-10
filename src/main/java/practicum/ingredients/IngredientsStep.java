@@ -9,12 +9,12 @@ import static io.restassured.RestAssured.given;
 public class IngredientsStep extends Parameters {
     // Получение списка ингредиентов
     @Step("Getting a list of ingredients")
-    public OrderIngredients getIngredients() {
+    public IngredientsOrder getIngredients() {
         return spec()
                 .get(Urls.INGREDIENTS)
                 .then().log().all()
                 .extract()
                 .body()
-                .as(OrderIngredients.class);
+                .as(IngredientsOrder.class);
     }
 }

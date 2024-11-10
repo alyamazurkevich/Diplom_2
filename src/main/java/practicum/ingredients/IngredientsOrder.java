@@ -2,16 +2,16 @@ package practicum.ingredients;
 
 import java.util.List;
 
-public class OrderIngredients {
+public class IngredientsOrder {
     private String success;
     private List<Ingredients> data;
 
-    public OrderIngredients (List<Ingredients> data, String success) {
+    public IngredientsOrder (List<Ingredients> data, String success) {
         this.data = data;
         this.success = success;
     }
 
-    public OrderIngredients() {
+    public IngredientsOrder() {
 
     }
     public String getSuccess() {

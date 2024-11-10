@@ -1,7 +1,7 @@
 package Order;
 
 import practicum.ingredients.IngredientsStep;
-import practicum.ingredients.OrderIngredients;
+import practicum.ingredients.IngredientsOrder;
 import practicum.order.*;
 import practicum.order.Order;
 import practicum.order.OrderChecking;
@@ -59,9 +59,9 @@ public class CreationOrderTest {
     @Description("Get orders with auth user. POST/api/orders")
     @Test
     public void createOrderCorrectHashAuth(){
-        OrderIngredients orderIngredients = ingredientsStep.getIngredients();
-        ingredientIds.add(orderIngredients.getData().get(0).get_id());
-        ingredientIds.add(orderIngredients.getData().get(1).get_id());
+        IngredientsOrder ingredientsOrder = ingredientsStep.getIngredients();
+        ingredientIds.add(ingredientsOrder.getData().get(0).get_id());
+        ingredientIds.add(ingredientsOrder.getData().get(1).get_id());
         ValidatableResponse createOrderResponse = orderStep.createOrder(order,accessToken);
         orderChecking.checkCreatedOrder(createOrderResponse);
     }
@@ -70,9 +70,9 @@ public class CreationOrderTest {
     @Description("POST/api/orders")
     @Test
     public void createOrderCorrectHashNotAuth(){
-        OrderIngredients orderIngredients = ingredientsStep.getIngredients();
-        ingredientIds.add(orderIngredients.getData().get(0).get_id());
-        ingredientIds.add(orderIngredients.getData().get(1).get_id());
+        IngredientsOrder ingredientsOrder = ingredientsStep.getIngredients();
+        ingredientIds.add(ingredientsOrder.getData().get(0).get_id());
+        ingredientIds.add(ingredientsOrder.getData().get(1).get_id());
         ValidatableResponse orderResponse = orderStep.createOrderWithoutAuth(order);
         orderChecking.checkCreatedOrder(orderResponse);
     }
@@ -81,9 +81,9 @@ public class CreationOrderTest {
     @Description("POST/api/orders")
     @Test
     public void createOrderIncorrectHashAuth(){
-        OrderIngredients orderIngredients = ingredientsStep.getIngredients();
-        ingredientIds.add(orderIngredients.getData().get(0).get_id()+"000");
-        ingredientIds.add(orderIngredients.getData().get(1).get_id()+"000");
+        IngredientsOrder ingredientsOrder = ingredientsStep.getIngredients();
+        ingredientIds.add(ingredientsOrder.getData().get(0).get_id()+"000");
+        ingredientIds.add(ingredientsOrder.getData().get(1).get_id()+"000");
         ValidatableResponse orderResponse = orderStep.createOrder(order,accessToken);
         orderChecking.checkBadHash(orderResponse);
     }
@@ -92,9 +92,9 @@ public class CreationOrderTest {
     @Description("POST/api/orders")
     @Test
     public void createOrderIncorrectHashNotAuth(){
-        OrderIngredients orderIngredients = ingredientsStep.getIngredients();
-        ingredientIds.add(orderIngredients.getData().get(0).get_id()+"000");
-        ingredientIds.add(orderIngredients.getData().get(1).get_id()+"000");
+        IngredientsOrder ingredientsOrder = ingredientsStep.getIngredients();
+        ingredientIds.add(ingredientsOrder.getData().get(0).get_id()+"000");
+        ingredientIds.add(ingredientsOrder.getData().get(1).get_id()+"000");
         ValidatableResponse orderResponse = orderStep.createOrderWithoutAuth(order);
         orderChecking.checkBadHash(orderResponse);
     }
